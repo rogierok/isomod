@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isoMOD</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+        }
+        
+        #gameContainer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #gameCanvas {
+            border: 1px solid #333;
+            background: #111;
+        }
+        
+        #uploadButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+        
+        #uploadButton:hover {
+            background: #555;
+        }
+        
+        #fileInput {
+            display: none;
+        }
+        
+        #playerInfo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="1500" height="1000"></canvas>
+    </div>
+    
+    <button id="uploadButton">Upload isomodconfig</button>
+    <input type="file" id="fileInput" multiple accept=".json,.png,.jpg,.gif" webkitdirectory>
+    
+    <div id="playerInfo">
+        <div>Player: <span id="playerId">-</span></div>
+        <div>Position: <span id="position">-</span></div>
+        <div>Selected Sprite: <span id="selectedSprite">1</span></div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

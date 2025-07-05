@@ -1,0 +1,27 @@
+{
+  "name": "Default Player",
+  "appearance": {
+    "spriteId": 8,
+    "color": "#4A90E2"
+  },
+  "stats": {
+    "weight": 70,
+    "speed": 5.0,
+    "jumpHeight": 6.0,
+    "health": 100
+  },
+  "inventory": {
+    "maxSlots": 20,
+    "items": [
+      {
+        "id": "starter_tool",
+        "name": "Basic Tool",
+        "quantity": 1,
+        "metadata": {
+          "durability": 100,
+          "type": "tool"
+        }
+      }
+    ]
+  }
+}
